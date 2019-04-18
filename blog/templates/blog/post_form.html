@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block custom-css %}
+  <link rel="stylesheet" href="{% static 'blog/css/blog-style.css' %}" type="text/css">
+{% endblock %}
+        
+{% block content %}
+  <main role="main" class="container">
+    <div class="row blog-section">
+      <div class="col-md-8">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4"> Blog Post </legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit"> Post </button>
+            </div>
+        </form>
+      </div>
+      <div class="col-md-4">
+        {% include 'blog/side_blog.html' %}
+      </div>
+    </div>
+  </main>
+{% endblock content %}

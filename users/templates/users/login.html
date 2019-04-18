@@ -1,0 +1,42 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block custom-css %}
+  <link rel="stylesheet" href="{% static 'blog/css/blog-style.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <section id="login-bg">
+        <div class="register-main-section">
+            <div class="content-section register-section">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <div id="login-content">
+                            <img src="{% static 'blog/images/main-logo.png' %}" id="login-logo">
+                            <legend class="border-bottom mb-4">  </legend>
+                        </div>
+                        {{ form|crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-info" type="submit"> Login </button>
+                    </div>  
+                </form>
+                <div class="border-top pt-3">
+                    <small class="text-muted"> 
+                        Need an account? <a class="ml-2" href="{% url 'register' %}"> Sign Up </a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'blog/footer.html' %}
+{% endblock content %}

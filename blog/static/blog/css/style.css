@@ -1,0 +1,521 @@
+
+body {
+/*
+    background: url(../images/bg-sample.jpg) no-repeat center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+*/
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4; 
+}
+
+/* Global */
+
+#map {
+    margin: auto 0;
+    width: 100%;
+    max-height: 500px;
+}
+
+.account-img-1 {
+    height: 45px;
+    width: 45px;
+}
+
+.container {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 90% !important;
+}
+
+.custom-container {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 90%;
+}
+
+ ul {
+    margin: 0;
+    padding: 0;
+}
+
+.button_1 {
+    font-family: 'Montserrat', sans-serif;
+    height: 38px;
+    width: 250px;
+    background: #022b00;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+.button_2 {
+    font-family: 'Montserrat', sans-serif;
+    height: 38px;
+    width: 100%;
+    background: #022b00;
+    margin-top: 5px;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+.button_3 {
+    font-family: 'Montserrat', sans-serif;
+    height: 38px;
+    width: 100%;
+    background: #252e33;
+    margin-top: 10px;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+
+/* parallax */
+.parallax-window {
+  min-height: 488px;
+  background: transparent;
+  font-family: 'Montserrat', sans-serif !important;
+  color: white;
+}
+
+.parallax-window img {
+    width: 150px;
+}
+
+/* header */
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+
+.my-navbar {
+    font-family: 'Montserrat', sans-serif !important;
+    transition: 750ms ease;
+    background-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link  {
+    color: white !important;
+    font-size: 14px;
+    border-bottom: 3px solid transparent;
+    /* padding-left: 300px; */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover  {
+    border-bottom: 3px solid #022b00;
+}
+
+.navbar-dark .navbar-nav .current  {
+    border-bottom: 3px solid #022b00;
+}
+
+.my-navbar.scrolled {
+    background-color: #022b00;
+}
+
+a:hover {
+    color: red;
+}
+
+
+#branding-logo {
+    width: 320px;
+}
+
+#main-logo {
+    margin-top: 150px;
+    width: 550px;
+}
+
+/* showcase */
+
+#showcase {
+    font-family: 'Montserrat', sans-serif !important;
+    overflow: hidden;
+    min-height: 800px;
+    background: url('../images/bg-sample.JPG') no-repeat 0 -200px;
+}
+
+#showcase .show-1 {
+    margin: 0 auto;
+    width: 65%;
+    background-color:rgba(255,255,255,0.2);
+    border-radius: 12px 12px 12px 12px;
+}
+
+#showcase .show-1 .show-content-1 {
+    margin-top: 200px;
+    text-align: center;
+}
+
+#showcase .show-1 .show-content-1 img {
+    width: 350px;
+}
+
+#showcase .show-1 .show-content-1 p {
+   color: white;
+   padding-left: 32px;
+   padding-right: 32px;
+   font-size: 20px;
+}
+
+#showcase .show-1 .show-content-1 span {
+    font-size: 15px;
+}
+
+#showcase .show-2 {
+    text-align: right;
+}
+
+#showcase h1 {
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+
+
+/* newsletter */
+#newsletter {
+    font-family: 'Montserrat', sans-serif !important;
+    padding: 25px;
+    color: #ffffff;
+    background: #252e33;
+}
+
+#newsletter h3 {
+    float: left;
+    font-size: 25px;
+}
+
+#newsletter form {
+    float: right;
+}
+
+#newsletter input[type="email"] {
+    padding: 4px;
+    height: 35px;
+    width: 250px;
+}
+
+/* boxes */
+#boxes {
+    margin-top: 50px;
+}
+
+#boxes .box {
+    float: left;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+}
+
+#boxes .box img {
+    width: 200px;
+}
+
+
+.new-box img {
+    width: 200px;
+}
+.new-box {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
+
+/* Carousel */
+.carousel .carousel-caption{
+    background-color:rgba(255,255,255,0.5);
+    border-radius: 12px 12px 12px 12px;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-family: 'Montserrat', sans-serif !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.carousel .carousel-caption img{
+    width: 20px;
+}
+
+.carousel p a {
+    color: black;
+}
+
+.carousel p a:hover {
+    text-decoration: none;
+}
+
+
+
+/* Footer */
+footer {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+footer h5 {
+    color: white;
+}
+
+footer .my-footer {
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 40px;
+}
+
+footer .foot-icon {
+    width: 50px;
+    margin-top: 10px;
+}
+
+footer .foot-icon:hover {
+    text-decoration: none !important;
+    
+}
+
+footer {
+    color: white;
+    background-color: #022b00;
+    padding: 10px;
+}
+
+footer small ul {
+    list-style: none;
+}
+
+footer small ul a {
+    color: white;
+}
+
+footer small ul a:hover {
+    color: white;
+}
+
+footer img {
+    width: 80px;
+}
+
+footer .foot-sub {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    border-top: 2px solid #fefefe;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+footer input[type="email"] {
+    padding: 4px;
+    height: 35px;
+    width: 100%;
+}
+
+
+/* media queries */
+
+
+@media only screen and (max-width: 1556px) {
+    #newsletter, #newsletter h3, #newsletter form {
+        float: none !important;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 1164px) {
+    .show-1 {
+        width: 90% !important;
+    }
+
+    .account-img-1 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1057px) {
+    nav .container {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #my-nav-toggle {
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid white;
+    }
+    
+    nav {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 868px) {
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    
+    header {
+        padding-bottom: 20px;
+    }
+    
+    #showcase h1 {
+        margin-top: 40px;
+    }
+    
+    #newsletter button, .quote button {
+        display: block;
+        width: 100%;
+    }
+    
+    #newsletter form input[type="email"], .quote input, quote textarea{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    footer .footer-arrange {
+        width: 50%;
+    }
+
+    footer h4, h5 {
+        margin-top: 15px;
+    }
+    
+    footer {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 532px) {
+    #branding-logo {
+        width: 275px;
+    }
+
+    nav .container {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #showcase .show-1 .show-content-1 {
+        margin-top: 170px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1350px !important;
+    }
+}
+
+section {
+    background: #f8f8f8;
+}
+
+section .container {
+    padding-top: 40px;
+    padding-bottom: 40px; 
+}
+
+/* services starts here  */
+
+#showcase-1 {
+    overflow: hidden;
+    min-height: 800px;
+    background: url('../images/about-us-bg.jpg') no-repeat 0 -200px;
+}
+
+#show-sub-1 {
+    margin: 0 auto;
+    width: 95%;
+    text-align: center;
+    padding-top: 250px;
+    color: white;
+}
+
+#show-sub-1 img {
+    width: 300px;
+}
+
+#show-sub-1 h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 80px;
+}
+
+#show-sub-1 h5 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#show-sub-1 button {
+    font-family: 'Montserrat', sans-serif !important;
+    background: transparent;
+    color: white;
+    border-color: #022b00;
+    height: 45px;
+    width: 350px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#show-sub-1 button:hover {
+    background: #022b00;
+}
+
+
+/* media query */
+@media only screen and (max-width: 1040px) {
+    #show-sub-1 {
+        padding-top: 200px !important;
+    }
+}
+
+/* media query */
+@media only screen and (max-width: 500px) {
+    #show-sub-1 {
+        padding-top: 150px !important;
+    }
+}
+
+
+/* Login starts here */
+#login-bg {
+    overflow: hidden;
+    min-height: 650px;
+    background: url('../images/login.JPG') no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#login-content {
+    text-align: center;
+}
+
+#login-logo {
+    width: 300px;
+}

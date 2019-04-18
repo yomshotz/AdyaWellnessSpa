@@ -1,0 +1,133 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+{% block content %}
+    
+    <section id="showcase">
+        <div class="row">
+            <div class="col-md">
+                <div class="show-1">
+                    <div class="show-content-1">
+                        <img class="animated fadeIn slower" src="{% static 'blog/images/main-logo.PNG' %}">
+                        <p> 
+                            <i  class="animated fadeInUp slower">
+                            It’s not selfish to love yourself, take care of yourself, and to make your happiness a priority. It’s necessary.” – Mandy Hals
+                            </i>
+                            <br>
+                            <br>
+                            <span class="animated fadeInUp slower">
+                            Get promo code, discounts and health tips from Adya Wellness Spa!
+                            </span>
+                            <button type="submit" class="button_2 animated fadeInUp slower"> Get Started! </button>
+                            
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="custom-container">
+            <h3> Register your account to avail discounts ahead from other clients </h3>
+            <form>
+                <input type="email"placeholder="Enter email">
+                <button type="submit" class="button_1"> Submit </button>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row new-box">
+                <div class="col-md">
+                    <h1> Why Adya Wellness Spa is better than the other? </h1>
+                </div>
+            </div>
+            <div class="row new-box">
+                <div class="col-md wow fadeInUp" data-wow-duration="1">
+                   <img src="{% static 'blog/images/spa_1.png' %}">
+                    <h3> Thai Massage </h3>
+                    <p>
+                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p> 
+                </div>
+                <div class="col-md wow fadeInUp" data-wow-duration="2s">
+                    <img src="{% static 'blog/images/spa_3.png' %}">
+                <h3> Thai Massage </h3>
+                <p>
+                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p> 
+                </div>
+                <div class="col-md wow fadeInUp" data-wow-duration="3s">
+                    <img src="{% static 'blog/images/spa_2.png' %}">
+                <h3> Thai Massage </h3>
+                <p>
+                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p> 
+                </div>
+            </div>
+            <div class="row new-box">
+                <div class="col-md wow fadeInUp" data-wow-duration="1">
+                   <img src="{% static 'blog/images/spa_1.png' %}">
+                    <h3> Thai Massage </h3>
+                    <p>
+                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p> 
+                </div>
+                <div class="col-md wow fadeInUp" data-wow-duration="2s">
+                    <img src="{% static 'blog/images/spa_3.png' %}">
+                <h3> Thai Massage </h3>
+                <p>
+                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p> 
+                </div>
+                <div class="col-md wow fadeInUp" data-wow-duration="3s">
+                    <img src="{% static 'blog/images/spa_2.png' %}">
+                <h3> Thai Massage </h3>
+                <p>
+                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'blog/images/bg-sample-1.jpg' %}">
+        <div style="padding-top:200px" class="text-center wow fadeIn" data-wow-duration="5s">
+            <img src="{% static 'blog/images/spa-parallax.png' %}">
+            <h1> Bringing out the Beauty in You. </h1>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="row new-box">
+                <div class="col-md">
+                    <div class="wow fadeInUp" data-wow-duration="1s">
+                        <img src="{% static 'blog/images/spa_1.png' %}">
+                        <h3> Thai Massage </h3>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p> 
+                    </div>
+                </div>
+                
+                <div class="col-md">
+                    <div class="wow fadeInUp" data-wow-duration="2s">
+                        <img src="{% static 'blog/images/spa_3.png' %}">
+                        <h3> Thai Massage </h3>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p> 
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </section>
+
+{% endblock content %}

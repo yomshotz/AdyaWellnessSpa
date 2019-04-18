@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width">
+        <meta name="description" content="Adya Wellness Spa Marketing">
+        <meta name="keywords" content="Blog Posting and Marketing">
+        <meta name="author" content="Yom Eustaquio">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <!-- Page CSS -->
+        <link rel="stylesheet" href="{% static 'blog/css/style.css' %}" type="text/css">
+
+        {% block custom-css %}
+        {% endblock custom-css %}
+        
+        <!-- Page Icon -->
+        <link rel="shortcut icon" href="{% static 'blog/images/icon.png' %}" type="image/x-icon" />
+        
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+        
+        <!-- Page Animation Plug-In -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        
+
+        {% if title %}
+            <title> Adya Wellness Spa | {{ title }} </title>
+        {% else %}
+            <title> Adya Wellness Spa </title>
+        {% endif %}
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top my-navbar">
+            <div class="container">
+              <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">
+                  <img src="{% static 'blog/images/branding-logo-1.png' %}" class="branding-logo" id="branding-logo">
+              </a>
+              <button class="navbar-toggler" id="my-nav-toggle" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="navbar-nav mr-auto">
+                    {% if current_nav_home %}
+                        <a class="nav-item nav-link {{ current_nav_home }}" href="{% url 'blog-home' %}">Home</a>
+                    {% else %}
+                        <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
+                    {% endif %}
+
+                    {% if current_nav_services %}
+                        <a class="nav-item nav-link {{ current_nav_services }}" href="{% url 'blog-services' %}">Services</a>
+                    {% else %}
+                        <a class="nav-item nav-link" href="{% url 'blog-services' %}">Services</a>
+                    {% endif %}
+                    
+                    {% if current_nav_blog %}
+                        <a class="nav-item nav-link {{ current_nav_blog }}" href="{% url 'blog-posts' %}">Blog</a>
+                    {% else %}
+                        <a class="nav-item nav-link" href="{% url 'blog-posts' %}">Blog</a>
+                    {% endif %}
+                </div>
+                <!-- Navbar Right Side -->
+                <div class="navbar-nav">
+                    {% if user.is_authenticated %}
+                    <a class="nav-item nav-link" href="{% url 'profile' %}"> {{ user.username }}</a>
+                    <img class="rounded-circle account-img-1" src="{{ user.profile.image.url }}">
+                    <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
+                    <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                        <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                        <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                    {% endif %}
+                </div>
+              </div>
+            </div>
+        </nav>
+
+        {% block content %} 
+        {% endblock content %}
+
+        {% block addons %} 
+            {% if carousel and footer %}   
+                {% include 'blog/carousel.html' %}    
+                {% include 'blog/footer.html' %}
+            {% endif %}     
+        {% endblock addons %}
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            
+        <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        <!-- wow.js animate scrolling -->
+        <script src="{% static 'blog/js/wow.min.js' %}"></script>
+        <script>
+          new WOW().init();
+        </script>
+        
+        <!-- smooth scroll -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+        <!-- <script src="{% static 'blog/js/smooth-scroll.js' %}"> </script> -->
+        
+        <!-- Navbar fade -->
+         <script src="{% static 'blog/js/index.js' %}"></script>
+        
+        <!-- parallax -->
+        <script src="{% static 'blog/js/parallax.min.js' %}" charset="utf-8"></script>
+        <script>
+            $('.parallax-window').parallax();
+        </script>
+
+    </body>
+    
+</html>
