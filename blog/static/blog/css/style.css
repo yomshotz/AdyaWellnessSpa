@@ -519,3 +519,7 @@ section .container {
 #login-logo {
     width: 300px;
 }
+
+#construction {
+    width: 100%;
+}

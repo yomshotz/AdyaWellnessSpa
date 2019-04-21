@@ -15,10 +15,23 @@ fieldset ul {
 }
 
 .register-main-section {
+  overflow: hidden;
   padding-top: 150px;
   padding-bottom: 60px;
   margin: auto;
   width: 40%;
+}
+
+#login-bg .empty-content {
+  text-align: center;
+}
+
+#login-bg .empty-content a {
+  color: black;
+}
+
+#login-bg .empty-content a:hover {
+  text-decoration: none;
 }
 
 .profile-main-section {
