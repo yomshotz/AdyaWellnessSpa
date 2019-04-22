@@ -7,6 +7,7 @@ fieldset ul {
 }
 
 .content-section {
+    font-family: 'Montserrat', sans-serif;
     background: #ffffff;
     padding: 10px 20px;
     border: 1px solid #dddddd;
@@ -40,6 +41,7 @@ fieldset ul {
 }
 
 .blog-section, .profile-section {
+  font-family: 'Montserrat', sans-serif;
   padding-top: 150px;
 }
   
@@ -88,6 +90,18 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+a h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+li a {
+  color: black;
+}
+
+li a:hover {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 980px) {
