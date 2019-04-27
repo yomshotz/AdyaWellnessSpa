@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
+from captcha.fields import CaptchaField
 from django.views.generic import (
     ListView,
     DetailView,
@@ -11,10 +12,22 @@ from django.views.generic import (
 from .models import Post
 
 
+def handler404(request, exception):
+    context = RequestContext(request)
+
+    err_code = 404
+    response = render_to_response(
+        'blog/errors/404.html', {"code": err_code}, context)
+    response.status_code = 404
+
+    return response
+
+
 def home(request):
     context_home = {
         'carousel': True,
         'footer': True,
+        'map': True,
         'title': 'Home',
         'current_nav_home': 'current',
     }
@@ -26,6 +39,7 @@ def services(request):
     context_services = {
         'carousel': True,
         'footer': True,
+        'map': True,
         'title': 'Services',
         'current_nav_services': 'current',
     }
@@ -76,10 +90,12 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
+
     fields = ['title', 'content']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+
         return super().form_valid(form)
 
 

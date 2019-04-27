@@ -1,0 +1,40 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block custom-css %}
+  <link rel="stylesheet" href="{% static 'blog/css/blog-style.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <section id="login-bg">
+        <div class="register-main-section">
+            <div class="content-section login-content">
+                <div class="header">
+                    <h1> Oops! </h1>
+                    <h3> We can't seem to find the page you're looking </h3>
+                    <br>
+                    <h4> Error code: 404 </h4>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <img src="{% static 'blog/images/girl.png' %}" id="construction">
+                    </div>
+                    <div class="col-md">
+                        <img src="{% static 'blog/images/broken-heart.png' %}" id="construction">
+                    </div>
+                </div>
+                <br><br>
+            <div class="empty-content">
+                <small class="text-muted"> 
+                    <a href="{% url 'blog-home' %}"><h2> < Go back to Home Page </h2> </a>
+                </small>
+            </div>
+            </div>
+        </div>
+
+        
+    </section>
+    {% include 'blog/footer.html' %}
+{% endblock content %}

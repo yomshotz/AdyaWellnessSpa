@@ -12,12 +12,18 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
+            human = True
+
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(
                 request, f'Account has been created successfully for {username}!')
             return redirect('login')
-
+        else:
+            human = False
+            if human is False:
+                messages.warning(
+                    request, f'Invalid captcha, please try again.')
     else:
         form = UserRegisterForm()
 

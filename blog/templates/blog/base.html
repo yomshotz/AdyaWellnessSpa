@@ -85,7 +85,12 @@
 
         {% block addons %} 
             {% if carousel and footer %}   
-                {% include 'blog/carousel.html' %}    
+                {% include 'blog/carousel.html' %}
+                
+                {% if map %}
+                    {% include 'blog/map.html' %}
+                {% endif %}
+
                 {% include 'blog/footer.html' %}
             {% endif %}     
         {% endblock addons %}

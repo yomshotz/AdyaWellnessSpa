@@ -35,6 +35,16 @@ fieldset ul {
   text-decoration: none;
 }
 
+.login-content .header h1 {
+  color: #022b00;
+  font-size: 100px;
+}
+
+.login-content .header h4 {
+  color: red;
+  font-size: 30px;
+}
+
 .profile-main-section {
   margin: auto;
   width: 80%;
