@@ -25,7 +25,7 @@ from users import views as user_views
 handler404 = 'blog.views.handler404'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin-xyz-admin/', admin.site.urls),
     path('captcha/', include('captcha.urls')),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
